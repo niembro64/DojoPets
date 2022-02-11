@@ -2,12 +2,12 @@
 
 class Pet:
 
-    def __init__ (self, n = "BLANK_PET"):
+    def __init__ (self, n = "BLANK_PET", ty = "", tr = "", h = "", e = ""):
         self.name = n
-        self.type
-        self.tricks
-        self.health
-        self.energy
+        self.type = ty
+        self.tricks = tr
+        self.health = h
+        self.energy = e
 
     def sleep():
         pass
