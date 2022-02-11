@@ -1,5 +1,6 @@
 # NINJAS
 
+from urllib import robotparser
 import pet
 
 
@@ -12,25 +13,49 @@ class Ninja:
         self.pet_food = pf
         self.treats = t
 
-    def walk():
+    def walk(this):
+        this.pet.play()
         return this
 
-    def feed():
+    def feed(this):
+        this.pet.eat()
         return this
 
-    def bathe():
+    def bathe(this):
+        this.pet.noise()
         return this
 
-    def myPet(this):
-        print(f"MyPet: {this.pet}")
+    def getPetName(this):
+        print(f"MyPet: {this.pet.name}")
         return this
+
+        	
+    
+# implement the following methods:
+# walk() - walks the ninja's pet invoking the pet play() method
+# feed() - feeds the ninja's pet invoking the pet eat() method
+# bathe() - cleans the ninja's pet invoking the pet noise() method
+
 
 
 ####################################
-RobyNinja = Ninja()
+RobyNinja = Ninja("Roby", "Daniele", "", "", "Max")
 
 print()
 print(RobyNinja.first_name)
+print(RobyNinja.last_name)
 
 ################################
-RobyNinja.myPet()
+print()
+RobyNinja.getPetName()
+print(f"MyPet: {RobyNinja.pet.name}")
+
+print()
+RobyNinja.walk()
+RobyNinja.bathe()
+RobyNinja.feed()
+
+##################
+
+EricNinja = Ninja("Eric", "Niemo", "asdf", "asdf", "Ed_Man")
+EricNinja.feed()
